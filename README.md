@@ -35,6 +35,8 @@ In the table below, the models trained with the proposed method as well as the u
 |      large | Proposed Method       | 25	|23	|28	|28     |
 
 To run the code and see the results presented in the table, just run the following command in the codes folder. Before execution, it is necessary to put the appropriate test and evaluation data in the data path folder. Also, you should choose the dimensions of the model you use according to Table 1. The created translations are available in the output folder.
+
+## evaluation
 ```
 MODEL=mass_enfr_1024.pth
 python train.py \
@@ -59,7 +61,6 @@ python train.py \
   --eval_only true			\
   --dump_path  /output/ 
   --reload_model "$MODEL,$MODEL"                       \
-
 ```
 
 
