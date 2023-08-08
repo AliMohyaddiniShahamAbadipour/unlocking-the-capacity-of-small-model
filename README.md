@@ -10,7 +10,7 @@ In general, the features of the proposed method can be listed as follows:
 This method has been used to increase the quality of unsupervised neural machine translation on two languages, English and French. Four models have been created in different sizes, and the proposed method has improved the quality on three very small, small and medium models. The dimensions of the proposed models can be seen in the table below.
 
 | Size of Model  | Vocabulary size | Embedding Vector Dim | # layers  | # Heads | P-dropout    | Input output Embedding Sharing  | # Model parameters |
-| ------------- | ------------- | ------------- | ------------- |------------- | ------------- | ------------- | ------------- | ------------- |
+| ------------- | ------------- | ------------- | ------------- |------------- | ------------- | ------------- | ------------- |
 | Very small  |55 k   |128  | 1  |1  | 0.1  | yes | 15.5M  | 
 | small       | 65 k  |256  | 2  |2  |  0.1 | yes  | 41.5 M  | 
 | medium      | 55 k  |420  | 4  |3  | 0.1  | yes  | 70.7 M| 
