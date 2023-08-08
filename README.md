@@ -8,3 +8,10 @@ In general, the features of the proposed method can be listed as follows:
 + The proposed method does not add any computational load to the model.
 
 This method has been used to increase the quality of unsupervised neural machine translation on two languages, English and French. Four models have been created in different sizes, and the proposed method has improved the quality on three very small, small and medium models. The dimensions of the proposed models can be seen in the table below.
+
+| # Model parameters  | Input output Embedding Sharing | # decoder parameters | # encoder parameters  | P-dropout | 	# Heads  | 	# layers  | Embedding Vector Dim  |	Vocabulary size  | Size of Model | 
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
+					
