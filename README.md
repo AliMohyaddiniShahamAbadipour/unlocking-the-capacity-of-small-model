@@ -21,3 +21,15 @@ This method has been used to increase the quality of unsupervised neural machine
 In the table below, the models trained with the proposed method as well as the usual method can be obtained.
 
 **Tabel 2: BLEU value for the proposed method and the [Son19] method based on four evaluated datasets**
+
+| Size of Model  | Method | Dataset | Dataset  | Dataset | Dataset |
+| :-------------: | :-------------: | :-------------: | :-------------: |:-------------: | :-------------: |
+| ----  | ---- | Valid en-fr |	Valid fr-en |	Test en-fr |	Test fr-en |
+| Very small | MASS-unsupNMT [Son19] | 0.97  | 1.16  | 1.04  |  1.31    |
+| Very small | Proposed Method       |  6.45 | 7.72  |  7    |  8.51    |
+|      small | MASS-unsupNMT [Son19] | 9.86   |	8.06 |	11.5 |	8.14    |
+|      small | Proposed Method       |  14.5| 14	|17	|16.5   |
+|     Medium | MASS-unsupNMT [Son19] | 18.15	|17.75	|20.37	|20.33  |
+|     Medium | Proposed Method       |  19.57	|18.46	|22.95	|21.67  |
+|     large  | MASS-unsupNMT [Son19] | 25	|23	|28	|28     |
+|      large | Proposed Method       | 25	|23	|28	|28     |
