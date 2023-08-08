@@ -1,5 +1,5 @@
 # unlocking-the-capacity-of-small-model
-Freeing the capacity of small models using data-driven artificial intelligence is a new way to increase the quality of small models directly.
+[Freeing the capacity of small models using data-driven artificial intelligence](https://drive.google.com/file/d/1IasZIyiJTidW2YO2Pv1H7hl2aqNkPvkk/view?usp=drive_link) is a new way to increase the quality of small models directly.
 While the general methods of compressing models to improve the quality of a small model are dependent on the creation and training of a larger model, the proposed method increases the quality of the model completely directly and independently of the creation and training of a larger model.
 In general, the features of the proposed method can be listed as follows:
 + The proposed method is based on data and its implementation is very simple.
