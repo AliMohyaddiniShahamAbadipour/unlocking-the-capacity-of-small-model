@@ -22,7 +22,7 @@ In the table below, the models trained with the proposed method as well as the u
 
 **Tabel 2: BLEU value for the proposed method and the [Son19] method based on four evaluated datasets**
 
-| Size of Model  | Method | Dataset | Dataset  | Dataset | Dataset |
+| Size of Model  | Model | Dataset | Dataset  | Dataset | Dataset |
 | :-------------: | :-------------: | :-------------: | :-------------: |:-------------: | :-------------: |
 | ----  | ---- | Valid en-fr |	Valid fr-en |	Test en-fr |	Test fr-en |
 | Very small | [MASS-unsupNMT [Son19]](https://drive.google.com/file/d/1zMWUNMP_1cOSms64SeMhIRhiwJFVUd3g/view?usp=drive_link) | 0.97  | 1.16  | 1.04  |  1.31    |
