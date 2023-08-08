@@ -40,16 +40,16 @@ Currently we implement unlocking-the-capacity-of-small-model for unsupervised NM
 To run the code and see the results presented in the table, just run the following command in the codes folder. Before execution, it is necessary to put the appropriate test and evaluation data in the data path folder. Also, you should choose the dimensions of the model you use according to Table 1. The created translations are available in the output folder.
 
 ```
-MODEL=mass_enfr_1024.pth
+MODEL=pp_vs.pth
 python train.py \
   --exp_name unsupMT_enfr                              \
   --data_path  ./data/processed/en-fr/                  \
   --lgs 'en-fr'                                        \
   --bt_steps 'en-fr-en,fr-en-fr'                       \
   --encoder_only false                                 \
-  --emb_dim 1024                                       \
-  --n_layers 6                                         \
-  --n_heads 8                                          \
+  --emb_dim 128                                       \
+  --n_layers 1                                         \
+  --n_heads 1                                          \
   --dropout 0.1                                        \
   --attention_dropout 0.1                              \
   --gelu_activation true                               \
