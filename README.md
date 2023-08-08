@@ -38,6 +38,8 @@ To run the code and see the results presented in the table, just run the followi
 
 ## evaluation
 Currently we implement unlocking-the-capacity-of-small-model for unsupervised NMT based on the codebase of [MASS](https://github.com/microsoft/MASS)
+
+Use the following code to evaluate the presented models and get the results
 ```
 MODEL=mass_enfr_1024.pth
 python train.py \
