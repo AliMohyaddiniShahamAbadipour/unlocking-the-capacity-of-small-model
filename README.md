@@ -25,8 +25,8 @@ In the table below, the models trained with the proposed method as well as the u
 | Size of Model  | Method | Dataset | Dataset  | Dataset | Dataset |
 | :-------------: | :-------------: | :-------------: | :-------------: |:-------------: | :-------------: |
 | ----  | ---- | Valid en-fr |	Valid fr-en |	Test en-fr |	Test fr-en |
-| Very small | MASS-unsupNMT [Son19] | 0.97  | 1.16  | 1.04  |  1.31    |
-| Very small | Proposed Method       |  **6.45** | **7.72**  | **7**   |  **8.51**    |
+| Very small | [MASS-unsupNMT [Son19]](https://drive.google.com/file/d/1IasZIyiJTidW2YO2Pv1H7hl2aqNkPvkk/view?usp=drive_link) | 0.97  | 1.16  | 1.04  |  1.31    |
+| Very small | [Proposed Method]()       |  **6.45** | **7.72**  | **7**   |  **8.51**    |
 |      small | MASS-unsupNMT [Son19] | 9.86   |	8.06 |	11.5 |	8.14    |
 |      small | Proposed Method       |  **14.5**| **14**	|**17**	|**16.5**   |
 |     Medium | MASS-unsupNMT [Son19] | 18.15	|17.75	|20.37	|20.33  |
@@ -37,6 +37,7 @@ In the table below, the models trained with the proposed method as well as the u
 To run the code and see the results presented in the table, just run the following command in the codes folder. Before execution, it is necessary to put the appropriate test and evaluation data in the data path folder. Also, you should choose the dimensions of the model you use according to Table 1. The created translations are available in the output folder.
 
 ## evaluation
+Currently we implement unlocking-the-capacity-of-small-model for unsupervised NMT based on the codebase of [MASS](https://github.com/microsoft/MASS)
 ```
 MODEL=mass_enfr_1024.pth
 python train.py \
