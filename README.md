@@ -34,8 +34,28 @@ In the table below, the models trained with the proposed method as well as the u
 |     large  | MASS-unsupNMT [Son19] | 25	|23	|28	|28     |
 |      large | Proposed Method       | 25	|23	|28	|28     |
 
+
+##Dependencies
+Currently we implement unlocking-the-capacity-of-small-model for unsupervised NMT based on the codebase of [MASS](https://github.com/microsoft/MASS) The depencies are as follows:
+
++Python 3
++NumPy
++PyTorch (version 0.4 and 1.0)
++fastBPE (for BPE codes)
++Moses (for tokenization)
+
+
+##Data Ready
+We use the same BPE codes and vocabulary with MASS. Here we take English-French as an example.
+
+```
+./get-data-nmt.sh --src en --tgt fr --reload_codes codes_enfr --reload_vocab vocab_enfr
+
+```
+
+
 ## evaluation
-Currently we implement unlocking-the-capacity-of-small-model for unsupervised NMT based on the codebase of [MASS](https://github.com/microsoft/MASS)
+
 
 To run the code and see the results presented in the table, just run the following command in the codes folder. Before execution, it is necessary to put the appropriate test and evaluation data in the data path folder. Also, you should choose the dimensions of the model you use according to Table 1. The created translations are available in the output folder.
 
