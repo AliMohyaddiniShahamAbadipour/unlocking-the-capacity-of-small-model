@@ -45,7 +45,7 @@ Currently we implement unlocking-the-capacity-of-small-model for unsupervised NM
 
 ## Data Ready
 We use the BPE codes and vocabulary different from MASS. Here we take English-French as an example.
-To select the VOCAB and CODES files according to the table one of the files in the [codes](valid&test_data) folder should be used
+To select the VOCAB and CODES files according to the table one of the files in the [vocabulary&BPEcodes](vocabulary&BPEcodes) folder should be used
 
 ```
 ./get-data-nmt.sh --src en --tgt fr --reload_codes CODES --reload_vocab VOCAB
