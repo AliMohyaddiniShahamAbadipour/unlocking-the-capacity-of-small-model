@@ -54,9 +54,7 @@ To select the VOCAB and CODES files according to the table one of the files in t
 
 ## Pre-training
 Before running the codes, it is necessary to put the appropriate training data in the data path folder.
-
 To generate training data, you must use the get-data-nmt.sh file that was introduced in the previous section.
-
 Also, you should choose the dimensions of the model you use according to Table 1.
 
 ```
