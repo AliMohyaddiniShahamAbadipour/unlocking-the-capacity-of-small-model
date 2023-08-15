@@ -52,7 +52,9 @@ To select the VOCAB and CODES files according to the table one of the files in t
 
 ```
 
-## Pre-training:
+## Pre-training
+Before running the codes, it is necessary to put the appropriate training data in the data path folder. Also, you should choose the dimensions of the model you use according to Table 1.
+
 ```
 python train.py                                      \
 --exp_name unsupMT_enfr                              \
@@ -60,16 +62,16 @@ python train.py                                      \
 --lgs 'en-fr'                                        \
 --mass_steps 'en,fr'                                 \
 --encoder_only false                                 \
---emb_dim 1024                                       \
---n_layers 6                                         \
---n_heads 8                                          \
+--emb_dim 128                                       \
+--n_layers 1                                         \
+--n_heads 2                                          \
 --dropout 0.1                                        \
 --attention_dropout 0.1                              \
 --gelu_activation true                               \
 --tokens_per_batch 3000                              \
 --optimizer adam_inverse_sqrt,beta1=0.9,beta2=0.98,lr=0.0001 \
---epoch_size 200000                                  \
---max_epoch 100                                      \
+--epoch_size 100000                                  \
+--max_epoch 1200                                      \
 --eval_bleu true                                     \
 --word_mass 0.5                                      \
 --min_len 5                                          \
@@ -79,7 +81,7 @@ python train.py                                      \
 After pre-training, we use back-translation to fine-tune the pre-trained model on unsupervised machine translation:
 
 ```
-MODEL=mass_enfr_1024.pth
+MODEL=pretrained.pth
 
 python train.py \
   --exp_name unsupMT_enfr                              \
@@ -87,9 +89,9 @@ python train.py \
   --lgs 'en-fr'                                        \
   --bt_steps 'en-fr-en,fr-en-fr'                       \
   --encoder_only false                                 \
-  --emb_dim 1024                                       \
-  --n_layers 6                                         \
-  --n_heads 8                                          \
+  --emb_dim 128                                       \
+  --n_layers 1                                         \
+  --n_heads 2                                          \
   --dropout 0.1                                        \
   --attention_dropout 0.1                              \
   --gelu_activation true                               \
@@ -97,7 +99,7 @@ python train.py \
   --batch_size 32	                                     \
   --bptt 256                                           \
   --optimizer adam_inverse_sqrt,beta1=0.9,beta2=0.98,lr=0.0001 \
-  --epoch_size 200000                                  \
+  --epoch_size 100000                                  \
   --max_epoch 30                                       \
   --eval_bleu true                                     \
   --reload_model "$MODEL,$MODEL"                       \
@@ -105,8 +107,7 @@ python train.py \
 
 ## evaluation
 
-
-To run the code and see the results presented in the table, just run the following command in the codes folder. Before execution, it is necessary to put the appropriate test and evaluation data in the data path folder. Also, you should choose the dimensions of the model you use according to Table 1. The created translations are available in the output folder.
+To run the code and see the results presented in the table 2, just run the following command in the codes folder. Before execution, it is necessary to put the appropriate test and evaluation data in the data path folder. Also, you should choose the dimensions of the model you use according to Table 1. The created translations are available in the output folder.
 
 ```
 MODEL=pp_vs.pth
@@ -126,7 +127,7 @@ python train.py \
   --batch_size 32	                                     \
   --bptt 256                                           \
   --optimizer adam_inverse_sqrt,beta1=0.9,beta2=0.98,lr=0.0001 \
-  --epoch_size 200000                                  \
+  --epoch_size 100000                                  \
   --max_epoch 30                                       \
   --eval_bleu true                                     \
   --eval_only true			\
