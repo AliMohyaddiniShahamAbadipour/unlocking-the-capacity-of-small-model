@@ -1,5 +1,5 @@
 # unlocking-the-capacity-of-small-model
-[Freeing the capacity of small models using data-driven artificial intelligence](https://drive.google.com/file/d/1IasZIyiJTidW2YO2Pv1H7hl2aqNkPvkk/view?usp=drive_link) is a new way to increase the quality of small models directly.
+[Freeing the capacity of small models using data-driven artificial intelligence](https://drive.google.com/file/d/18jCoEWIwnN_nJZTOjDdEzjtKT_r8zs5O/view?usp=drive_link) is a new way to increase the quality of small models directly.
 While the general methods of compressing models to improve the quality of a small model are dependent on the creation and training of a larger model, the proposed method increases the quality of the model completely directly and independently of the creation and training of a larger model.
 In general, the features of the proposed method can be listed as follows:
 + The proposed method is based on data and its implementation is very simple.
@@ -49,6 +49,57 @@ We use the same BPE codes and vocabulary with MASS. Here we take English-French 
 ```
 ./get-data-nmt.sh --src en --tgt fr --reload_codes codes_enfr --reload_vocab vocab_enfr
 
+```
+
+## Pre-training:
+```
+python train.py                                      \
+--exp_name unsupMT_enfr                              \
+--data_path ./data/processed/en-fr/                  \
+--lgs 'en-fr'                                        \
+--mass_steps 'en,fr'                                 \
+--encoder_only false                                 \
+--emb_dim 1024                                       \
+--n_layers 6                                         \
+--n_heads 8                                          \
+--dropout 0.1                                        \
+--attention_dropout 0.1                              \
+--gelu_activation true                               \
+--tokens_per_batch 3000                              \
+--optimizer adam_inverse_sqrt,beta1=0.9,beta2=0.98,lr=0.0001 \
+--epoch_size 200000                                  \
+--max_epoch 100                                      \
+--eval_bleu true                                     \
+--word_mass 0.5                                      \
+--min_len 5                                          \
+```
+
+## Fine-tuning
+After pre-training, we use back-translation to fine-tune the pre-trained model on unsupervised machine translation:
+
+```
+MODEL=mass_enfr_1024.pth
+
+python train.py \
+  --exp_name unsupMT_enfr                              \
+  --data_path ./data/processed/en-fr/                  \
+  --lgs 'en-fr'                                        \
+  --bt_steps 'en-fr-en,fr-en-fr'                       \
+  --encoder_only false                                 \
+  --emb_dim 1024                                       \
+  --n_layers 6                                         \
+  --n_heads 8                                          \
+  --dropout 0.1                                        \
+  --attention_dropout 0.1                              \
+  --gelu_activation true                               \
+  --tokens_per_batch 2000                              \
+  --batch_size 32	                                     \
+  --bptt 256                                           \
+  --optimizer adam_inverse_sqrt,beta1=0.9,beta2=0.98,lr=0.0001 \
+  --epoch_size 200000                                  \
+  --max_epoch 30                                       \
+  --eval_bleu true                                     \
+  --reload_model "$MODEL,$MODEL"                       \
 ```
 
 ## evaluation
