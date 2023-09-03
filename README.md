@@ -30,7 +30,7 @@ In the table below, the models trained with the proposed method as well as the u
 |      small | [MASS-unsupNMT [Son19]](https://drive.google.com/file/d/1t2ArfzUB7CMTA1kDi5uDxXswF5PXosEq/view?usp=drive_link) | 9.86   |	8.06 |	11.5 |	8.14    |
 |      small | [Proposed Method](https://drive.google.com/file/d/1VtXX5jR_s3JPhBk9mZQ8qmKDCQc9vrsW/view?usp=drive_link) |  **14.5**| **14**	|**17**	|**16.5**   |
 |     Medium | [MASS-unsupNMT [Son19]](https://drive.google.com/file/d/1vvHbsQMmz5RtT3yv1r08bdMNnLI8izki/view?usp=drive_link) | 18.15	|17.75	|20.37	|20.33  |
-|     Medium | [Proposed Method](https://drive.google.com/file/d/131Ka5jTGOxrBcVW0jLddqkej2-TVoEpi/view?usp=drive_link) |  **19.57**|**18.46**| **22.95**| **21.67** |
+|     Medium | [Proposed Method](https://drive.google.com/file/d/14kWuWOAhiVdjxRrU81xWcNWSHo7Tu_IL/view?usp=sharing) |  **19.57**|**18.46**| **22.95**| **21.67** |
 |     large  | MASS-unsupNMT [Son19] | 25	|23	|28	|28     |
 |      large | Proposed Method       | 25	|23	|28	|28     |
 
