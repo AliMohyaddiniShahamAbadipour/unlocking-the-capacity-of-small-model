@@ -25,8 +25,8 @@ In the table below, the models trained with the proposed method as well as the u
 | Size of Model  | Model | Dataset | Dataset  | Dataset | Dataset |
 | :-------------: | :-------------: | :-------------: | :-------------: |:-------------: | :-------------: |
 | ----  | ---- | Valid en-fr |	Valid fr-en |	Test en-fr |	Test fr-en |
-| Very small | [MASS-unsupNMT [Son19]](https://drive.google.com/file/d/1zMWUNMP_1cOSms64SeMhIRhiwJFVUd3g/view?usp=drive_link) | 0.97  | 1.16  | 1.04  |  1.31    |
-| Very small | [Proposed Method](https://github.com/AliMohyaddiniShahamAbadipour/unlocking-the-capacity-of-small-model) |  **6.45** | **7.72**  | **7**   |  **8.51**    |
+| Very small | [MASS-unsupNMT [Son19]](https://drive.google.com/file/d/1l-MgSPJyjsIvBbbShgh7lOZpUVwzWUpK/view?usp=sharing) | 0.97  | 1.16  | 1.04  |  1.31    |
+| Very small | [Proposed Method](https://drive.google.com/file/d/12pPAlPZRkaIXzYueMjiAk5t0n9vxDi9w/view?usp=drive_link) |  **6.45** | **7.72**  | **7**   |  **8.51**    |
 |      small | [MASS-unsupNMT [Son19]](https://drive.google.com/file/d/1t2ArfzUB7CMTA1kDi5uDxXswF5PXosEq/view?usp=drive_link) | 9.86   |	8.06 |	11.5 |	8.14    |
 |      small | [Proposed Method](https://drive.google.com/file/d/1VtXX5jR_s3JPhBk9mZQ8qmKDCQc9vrsW/view?usp=drive_link) |  **14.5**| **14**	|**17**	|**16.5**   |
 |     Medium | [MASS-unsupNMT [Son19]](https://drive.google.com/file/d/1vvHbsQMmz5RtT3yv1r08bdMNnLI8izki/view?usp=drive_link) | 18.15	|17.75	|20.37	|20.33  |
